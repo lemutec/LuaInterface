@@ -3,19 +3,48 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>LuaInterface</RootNamespace>
+    <AssemblyVersion>2.0.4.0</AssemblyVersion>
+    <FileVersion>2.0.4.0</FileVersion>
+    <Version>$(VersionPrefix)2.0.4.0</Version>
+    <Authors>megax orthographic-pedant jmurdick ema</Authors>
+    <Company>Lemutec</Company>
+    <Description>Lightweight LuaInterface for .NET</Description>
+    <PackageProjectUrl>https://github.com/lemutec/LuaIntercace</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/lemutec/LuaIntercace</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>.NET Lua</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>logo.png</PackageIcon>
+    <NoWarn>1701;1702;3014;3021;3002;3001;3003;8618;8625;8601;8602;8603;8600;8604;</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>DEBUG;NETSTANDARD2_0</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;NETSTANDARD2_0;LUA_CORE;_WIN32;LUA_COMPAT_VARARG;LUA_COMPAT_MOD;LUA_COMPAT_GFIND;CATCH_EXCEPTIONS</DefineConstants>
     <OutputPath>..\..\Run\Debug\netstandard2.0\</OutputPath>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>NETSTANDARD2_0;LUA_CORE;_WIN32;LUA_COMPAT_VARARG;LUA_COMPAT_MOD;LUA_COMPAT_GFIND;CATCH_EXCEPTIONS</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="System.Reflection.Emit" Version="4.3.0" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="" />
+    <None Include="..\..\logo.png" Pack="true" PackagePath="" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Reflection.Emit" Version="4.7.0" />
+  </ItemGroup>
+ 
+  <ItemGroup Condition=" '$(Configuration)' == 'ProjectReference'">
     <ProjectReference Include="..\KopiLua\KopiLua.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\KopiLua\**\*.cs" Link="KopiLua\%(RecursiveDir)%(FileName)%(Extension)" />
+    <Compile Remove="..\KopiLua\obj\Debug\netstandard2.0\**" />
+    <Compile Remove="..\KopiLua\obj\Release\netstandard2.0\**" />
   </ItemGroup>
 
 </Project>

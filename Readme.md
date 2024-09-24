@@ -1,15 +1,15 @@
-LuaInterface 2.0.4 [![Build Status](https://travis-ci.org/Jakosa/LuaInterface.svg?branch=master)](https://travis-ci.org/Jakosa/LuaInterface) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Jakosa/luainterface/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-------------------
+[![NuGet](https://img.shields.io/nuget/v/LuaInterface.svg)](https://nuget.org/packages/LuaInterface) [![GitHub license](https://img.shields.io/github/license/lemutec/LuaInterface)](https://github.com/lemutec/LuaInterface/blob/master/LICENSE) [![Actions](https://github.com/lemutec/LuaInterface/actions/workflows/library.nuget.yml/badge.svg)](https://github.com/lemutec/LuaInterface/actions/workflows/library.nuget.yml)
 
-Copyright © 2003-2006 Fabio Mascarenhas de Queiroz
+LuaInterface
+---
 
-Maintainer: Craig Presti, craig@vastpark.com
+Let the lightweight LuaInterface continue to maintain certain functionalities.
 
-lua51.dll and lua51.exe are Copyright © 2005 Tecgraf, PUC-Rio
+Ported from https://github.com/jmurdick/LuaInterface.
 
 
 Getting started with LuaInterface:
----------
+---
 * Use LuaRunner.exe to run samples/testluaform.lua
 * Run TestLua.exe to see some more test cases
 * Look at src/TestLuaInterface/TestLua to see example usage from C# 
@@ -20,8 +20,14 @@ methods from Lua and use LuaInterface from within your .net application.
 .net from inside Lua
 * More instructions for installing and using in the doc/guide.pdf file.
 
+## What's new in LuaInterface 2.0.4
+
+- Change: Converted libraries to .NET Standard 2.0 and LuaRunner application to .NET 8.0
+- Added: Bring to Nuget Package
+- Other: Some information was not recorded
+
 What's new in LuaInterface 2.0.3
-------------------------------
+---
 * Fix: Private methods accessible via LuaInterface
 * Fix: Method overload lookup failures
 * Fix: Lua DoFile memory leaks when file not found (submitted by Paul Moore)
@@ -36,17 +42,17 @@ What's new in LuaInterface 2.0.3
 
 
 What's new in LuaInterface 2.0.1
-------------------------------
+---
 * Apparently the 2.0 built binaries had an issue for some users, this is just a rebuild with the lua sources pulled into the LuaInterface.zip
 
 What's new in LuaInterface 2.0
-------------------------------
+---
 * The base lua5.1.2 library is now built as entirely manged code.  LuaInterface is now pure CIL
 * Various adapters to connect the older x86 version of lua are no longer needed
 * Performance fixes contributed by Toby Lawrence, Oliver Nemoz and Craig Presti
 
 What's new in LuaInterface 1.5.3
-----------
+---
 * Internal lua panics (due to API violations) now throw LuaExceptions into .net
 * If .net code throws an exception into Lua and lua does not handle it, the
 original exception is forwarded back out to .net land.
@@ -54,14 +60,14 @@ original exception is forwarded back out to .net land.
 only works with tables.
 
 What's new in LuaInterface 1.5.2
-----------
+---
 * Overriding C# methods from Lua is fixed (broken with .net 2.0!)
 * Registering static C# functions for Lua is fixed (broken with Lua-5.1.1)
 * Rebuilt to fix linking problems with the binaries included in 1.5.1
 * RegisterFunction has been leaking things onto the stack 
 
 What's new in LuaInterface 1.5.1
-----------
+---
 Fix a serious bug w.r.t. garbage collection - made especially apparent 
 with the new lua5.1 switch: If you were *very* unlucky with timing 
 sometimes Lua would loose track of pointers to CLR functions.
@@ -76,7 +82,7 @@ course you can still use a colon if an _instance_ is being used.
 Static method calls are now much faster (due to better caching).
 
 What's new in LuaInterface 1.5
-----------
+---
 LuaInterface is now updated to be based on Lua5.1.1.  You can either use 
 your own build/binaries for Lua5.1.1 or use the version distributed here. 
 (Lots of thanks to Steffen Itterheim for this work!)
@@ -91,7 +97,7 @@ invalid pointer.
 
 Fixed a bug when strings with embedded null characters are passed in or 
 out of Lua (Thanks to Daniel Néri for the report & fix!)
- 
+
 The native components in LuaInterface (i.e. Lua51 and the loader) are 
 both built as release builds - to prevent problems loading standard 
 windows libraries.
@@ -101,7 +107,7 @@ modify Lua internals (a built version of lua51.dll is included in the
 regular LuaInterface distribution)
 
 What's New in LuaInterface 1.4
-----------
+---
 
 Note: Fabio area of interest has moved off in other directions (hopefully only temporarily).
 I've talked with Fabio and he's said he's okay with me doing a new release with various fixes
@@ -135,7 +141,7 @@ download this file unless you want to modify Lua internals (a built version
 of lua50.dll is included in the regular LuaInterface distribution)
 
 What's New in LuaInterface 1.3
-----------
+---
 
 LuaInterface now works with LuaBinaries Release 2 (http://luabinaries.luaforge.net)
 and Compat-5.1 Release 3 (http://luaforge.net/projects/compat). The loader DLL is now 
@@ -154,7 +160,7 @@ anonymous contribution in the Lua wiki). Check the _alt files in the samples fol
 
 
 What's New in LuaInterface 1.2.1
---------------------------------
+---
 
 Now checks if two LuaInterface.Lua instances are trying to share the same Lua state,
 and throws an exception if this is the case. Also included readonly clauses in public
@@ -164,7 +170,7 @@ This version includes the source of LuaInterfaceLoader.dll, with VS.Net 2003 pro
 files.
 
 What's New in LuaInterface 1.2
-------------------------------
+---
 
 LuaInterface now can be loaded as a module, so you can use the lua standalone
 interpreter to run scripts. Thanks to Paul Winwood for this idea and sample code
@@ -186,3 +192,11 @@ instead of
 Make sure the assemblies of the types you are passing have been loaded, or the call
 will fail. The test cases in src/TestLuaInterface/TestLua.cs have examples of the new
 functions.
+
+## Thanks to
+
+Copyright © 2003-2006 Fabio Mascarenhas de Queiroz
+
+Maintainer: Craig Presti, craig@vastpark.com
+
+lua51.dll and lua51.exe are Copyright © 2005 Tecgraf, PUC-Rio

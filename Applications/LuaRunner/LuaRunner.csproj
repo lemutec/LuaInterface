@@ -2,15 +2,15 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AssemblyName>LuaRunner</AssemblyName>
     <RootNamespace>LuaRunner</RootNamespace>
     <StartupObject>LuaRunner.LuaNetRunner</StartupObject>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>DEBUG;NETCOREAPP2_0</DefineConstants>
-    <OutputPath>..\..\Run\Debug\netcoreapp2.0\</OutputPath>
+    <DefineConstants>DEBUG;NET8</DefineConstants>
+    <OutputPath>..\..\Run\Debug\net8.0\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
