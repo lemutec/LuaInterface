@@ -9,8 +9,8 @@
     <Authors>megax orthographic-pedant jmurdick ema</Authors>
     <Company>Lemutec</Company>
     <Description>Lightweight LuaInterface for .NET</Description>
-    <PackageProjectUrl>https://github.com/lemutec/LuaIntercace</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/lemutec/LuaIntercace</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/lemutec/LuaInterface</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/lemutec/LuaInterface</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>.NET Lua</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -19,12 +19,12 @@
     <NoWarn>1701;1702;3014;3021;3002;3001;3003;8618;8625;8601;8602;8603;8600;8604;</NoWarn>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
     <DefineConstants>TRACE;DEBUG;NETSTANDARD2_0;LUA_CORE;_WIN32;LUA_COMPAT_VARARG;LUA_COMPAT_MOD;LUA_COMPAT_GFIND;CATCH_EXCEPTIONS</DefineConstants>
     <OutputPath>..\..\Run\Debug\netstandard2.0\</OutputPath>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
     <DefineConstants>NETSTANDARD2_0;LUA_CORE;_WIN32;LUA_COMPAT_VARARG;LUA_COMPAT_MOD;LUA_COMPAT_GFIND;CATCH_EXCEPTIONS</DefineConstants>
   </PropertyGroup>
 

@@ -8,7 +8,7 @@
     <StartupObject>LuaRunner.LuaNetRunner</StartupObject>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
     <DefineConstants>DEBUG;NET8</DefineConstants>
     <OutputPath>..\..\Run\Debug\net8.0\</OutputPath>
   </PropertyGroup>
