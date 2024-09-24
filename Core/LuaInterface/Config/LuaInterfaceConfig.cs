@@ -38,7 +38,7 @@ namespace LuaInterface.Config
 		public const string LuaInterfaceProduct = "LuaInterface";
 		public const string LuaInterfaceCopyright = "Copyright 2003-2008 Fabio Mascarenhas, Kevin Hesterm and 2012 Megax";
 		public const string LuaInterfaceTrademark = "MIT license";
-		public const string LuaInterfaceVersion = "2.0.4";
-		public const string LuaInterfaceFileVersion = "2.0.4.0";
+		public const string LuaInterfaceVersion = "2.0.5";
+		public const string LuaInterfaceFileVersion = "2.0.5.0";
 	}
 }

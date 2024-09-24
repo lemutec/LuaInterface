@@ -20,11 +20,15 @@ methods from Lua and use LuaInterface from within your .net application.
 .net from inside Lua
 * More instructions for installing and using in the doc/guide.pdf file.
 
-## What's new in LuaInterface 2.0.4
+What's new in LuaInterface 2.0.5
+---
+* Added Lua.GetObject to simplify extensions
 
-- Change: Converted libraries to .NET Standard 2.0 and LuaRunner application to .NET 8.0
-- Added: Bring to Nuget Package
-- Other: Some information was not recorded
+What's new in LuaInterface 2.0.4
+---
+* Change: Converted libraries to .NET Standard 2.0 and LuaRunner application to .NET 8.0
+* Added: Bring to Nuget Package
+* Other: Some information was not recorded
 
 What's new in LuaInterface 2.0.3
 ---

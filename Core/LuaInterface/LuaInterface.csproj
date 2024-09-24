@@ -3,9 +3,9 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>LuaInterface</RootNamespace>
-    <AssemblyVersion>2.0.4.0</AssemblyVersion>
-    <FileVersion>2.0.4.0</FileVersion>
-    <Version>$(VersionPrefix)2.0.4.0</Version>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <FileVersion>2.0.5.0</FileVersion>
+    <Version>$(VersionPrefix)2.0.5.0</Version>
     <Authors>megax orthographic-pedant jmurdick ema</Authors>
     <Company>Lemutec</Company>
     <Description>Lightweight LuaInterface for .NET</Description>
