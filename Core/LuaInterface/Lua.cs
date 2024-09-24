@@ -593,6 +593,14 @@ namespace LuaInterface
 		}
 
 		/*
+			* Gets an any type global variable
+			*/
+		public object GetObject(string fullPath) 
+		{
+			return this[fullPath];
+		}
+
+		/*
 			* Gets a numeric global variable
 			*/
 		public double GetNumber(string fullPath) 
